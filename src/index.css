@@ -47,7 +47,6 @@ main {
 }
 
 .add-ingredient-form > input {
-  border-radius: 6px;
   border: 1px solid #d1d5db;
   padding: 0.6rem 0.8rem;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
@@ -58,11 +57,52 @@ main {
 
 .add-ingredient-form > button {
   font-family: Inter, sans-serif;
-  border-radius: 6px;
   border: none;
   background-color: #141413;
   color: #fafaf8;
   width: 150px;
   font-size: 0.875rem;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.ingredients-list {
+  color: #475467;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.ask-recipe {
+  padding: 1.75rem 2.56rem 1.81rem 2.62rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0efeb;
+  flex-wrap: wrap;
+}
+
+.ask-recipe,
+.get-recipe-btn,
+.add-ingredient-form > input,
+.add-ingredient-form > button {
+  border-radius: 6px;
+}
+
+.ask-recipe h3 {
+  color: #141413;
+}
+
+.ask-recipe p {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.get-recipe-btn {
+  padding: 0.5625rem 1.0625rem;
+  justify-content: center;
+  background-color: #d17557;
+  color: #fafaf8;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
