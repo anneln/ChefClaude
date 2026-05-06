@@ -15,7 +15,7 @@ export default function Maincontent() {
       <form action={addIngredient} className="add-ingredient-form">
         <input
           type="text"
-          defaultValue="e.g Tomato"
+          placeholder="e.g Tomato"
           aria-label="Add ingredient"
           name="ingredient"
         />
