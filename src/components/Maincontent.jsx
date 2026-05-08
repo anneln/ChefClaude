@@ -1,5 +1,6 @@
 import React from "react";
 import IngredientsList from "./IngredientsList";
+import Recipe from "./Recipe";
 
 export default function Maincontent() {
   const [ingredients, setIngredients] = React.useState([]);
@@ -36,11 +37,7 @@ export default function Maincontent() {
           toggleRecipeShown={toggleRecipeShown}
         />
       )}
-      {recipeShown && (
-        <section>
-          <h2>Chef claude recommends:</h2>
-        </section>
-      )}
+      {recipeShown && <Recipe />}
     </main>
   );
 }
