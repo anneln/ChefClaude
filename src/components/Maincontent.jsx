@@ -15,8 +15,14 @@ export default function Maincontent() {
   }
 
   function addIngredient(formData) {
-    const newIngredient = formData.get("ingredient");
-    setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
+    const newIngredient = formData.get("ingredient").toLowerCase();
+    const alreadyExistIngredient = ingredients.includes(newIngredient);
+    alreadyExistIngredient
+      ? alert("You already add this ingredient !")
+      : setIngredients((prevIngredients) => [
+          ...prevIngredients,
+          newIngredient,
+        ]);
   }
 
   return (
@@ -27,6 +33,7 @@ export default function Maincontent() {
           placeholder="e.g Tomato"
           aria-label="Add ingredient"
           name="ingredient"
+          required
         />
         <button>+ Add ingredient</button>
       </form>
