@@ -1,6 +1,6 @@
 import React from "react";
 import IngredientsList from "./IngredientsList";
-import Recipe from "./Recipe";
+import ClaudeRecipeRecipe from "./ClaudeRecipe";
 
 export default function Maincontent() {
   const [ingredients, setIngredients] = React.useState([]);
