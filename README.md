@@ -14,3 +14,16 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+# Chef Claude project
+
+It’s a solo project inspired by a Scrimba course.
+The app collects ingredients from the user through a form, then sends them to an AI with a prompt asking for a recipe using those ingredients.
+
+## Technical Requirements
+
+- [x] Event Listeners
+- [x] State
+- [x] Forms in react
+- [x] State management strategies
+- [x] Use React-MarkDom to get Html
