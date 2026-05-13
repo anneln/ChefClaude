@@ -22,6 +22,5 @@ export async function getRecipeFromMistral(ingredientsArr) {
     return response.choices[0].message.content;
   } catch (err) {
     console.error(err.message);
-    console.error("Message complet:", JSON.stringify(err, null, 2));
   }
 }
