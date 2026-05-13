@@ -26,4 +26,4 @@ The app collects ingredients from the user through a form, then sends them to an
 - [x] State
 - [x] Forms in react
 - [x] State management strategies
-- [x] Use React-MarkDom to get Html
+- [x] Use React-MarkDown to get Html
