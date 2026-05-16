@@ -1,6 +1,6 @@
 import React from "react";
 import IngredientsList from "./IngredientsList";
-import { getRecipeFromMistral } from "./ai";
+import { getRecipeFromOpenAi } from "./ai";
 import ClaudeRecipe from "./ClaudeRecipe";
 
 export default function Maincontent() {
@@ -12,7 +12,7 @@ export default function Maincontent() {
   const [recipe, setRecipe] = React.useState("");
 
   async function getRecipe() {
-    setRecipe(await getRecipeFromMistral(ingredients));
+    setRecipe(await getRecipeFromOpenAi(ingredients));
   }
 
   function addIngredient(formData) {

@@ -8,7 +8,10 @@ export default function IngredientsList(props) {
         <div className="ask-recipe">
           <div>
             <h3>Ready for a recipe?</h3>
-            <p>Generate a recipe from your list of ingredients.</p>
+            <p>
+              Generate a recipe from your list of ingredients. Please wait a few
+              moments...
+            </p>
           </div>
           <button className="get-recipe-btn" onClick={props.getRecipe}>
             Get a recipe
