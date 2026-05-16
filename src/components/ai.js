@@ -26,7 +26,6 @@ export async function getRecipeFromOpenAi(ingredientsArr) {
       },
     );
     const data = await response.json();
-    console.log("Réponse OpenRouter:", data);
     return data.choices[0].message.content;
   } catch (err) {
     console.error(err.message);
