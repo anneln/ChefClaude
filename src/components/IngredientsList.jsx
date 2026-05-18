@@ -18,6 +18,11 @@ export default function IngredientsList(props) {
           </button>
         </div>
       )}
+      <div className="typing-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </section>
   );
 }
