@@ -20,6 +20,13 @@ If you are developing a production application, we recommend using TypeScript wi
 It’s a solo project inspired by a Scrimba course.
 The app collects ingredients from the user through a form, then sends them to an AI with a prompt asking for a recipe using those ingredients.
 
+## Extra Features
+
+1. Each ingredient must be unique in a recipe.
+2. Ingredient comparison is case-insensitive.
+3. The AI must detect the ingredients'language and generate the recipe in the same language.
+4. Show user that response can be long
+
 ## Technical Requirements
 
 - [x] Event Listeners
@@ -27,3 +34,5 @@ The app collects ingredients from the user through a form, then sends them to an
 - [x] Forms in react
 - [x] State management strategies
 - [x] Use React-MarkDown to get Html
+- [x] Added an animation before the recipe is displayed to keep users waiting.
+- [x] use vite.js
