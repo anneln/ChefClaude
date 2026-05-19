@@ -10,9 +10,12 @@ export default function Maincontent() {
   ));
 
   const [recipe, setRecipe] = React.useState("");
+  const [isLoading, setIsLoading] = React.useState(false);
 
   async function getRecipe() {
+    setIsLoading(true);
     setRecipe(await getRecipeFromOpenAi(ingredients));
+    setIsLoading(false);
   }
 
   function addIngredient(formData) {
@@ -45,7 +48,9 @@ export default function Maincontent() {
           getRecipe={getRecipe}
         />
       )}
-      {recipe && <ClaudeRecipe recipe={recipe} />}
+      {(recipe || isLoading) && (
+        <ClaudeRecipe recipe={recipe} isLoading={isLoading} />
+      )}
     </main>
   );
 }
