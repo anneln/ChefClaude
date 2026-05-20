@@ -21,6 +21,7 @@ export default async (request) => {
         },
         body: JSON.stringify({
           model: "openai/gpt-oss-120b:free",
+          stream: false,
           messages: [
             { role: "system", content: SYSTEM_PROMPT },
             {
