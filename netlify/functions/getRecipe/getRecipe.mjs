@@ -31,6 +31,10 @@ export default async (request) => {
     console.log("Status OpenRouter:", response.status);
     const data = await response.json();
     console.log("Réponse OpenRouter:", JSON.stringify(data));
+    console.log(
+      "Clé API:",
+      process.env.OPENROUTER_API_KEY ? "présente" : "undefined",
+    );
 
     return new Response(
       JSON.stringify({ recipe: data.choices[0].message.content }),
