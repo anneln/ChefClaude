@@ -13,7 +13,7 @@ export default function ClaudeRecipe(props) {
     </section>
   ) : (
     <section className="recipe-section" aria-live="polite">
-      <h2>Chef AI recommends:</h2>
+      <h2>Chef anneLnAI recommends:</h2>
       <ReactMarkdown>{props.recipe}</ReactMarkdown>
     </section>
   );
