@@ -2,4 +2,4 @@
   directory = "netlify/functions"
 
 [functions."getRecipe"]
-  timeout = 26
+  timeout = 75
