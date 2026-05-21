@@ -39,6 +39,14 @@ export default async (request) => {
     console.log("Réponse brute OpenRouter:", text);
     const data = JSON.parse(text);
 
+    if (data.error) {
+      console.error("Erreur OpenRouter:", data.error.message);
+      return new Response(JSON.stringify({ error: data.error.message }), {
+        status: 429,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
     return new Response(
       JSON.stringify({ recipe: data.choices[0].message.content }),
       { headers: { "Content-Type": "application/json" } },
