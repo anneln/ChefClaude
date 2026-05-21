@@ -1,0 +1,25 @@
+{
+  "name": "Chef AnneLnAI",
+  "short_name": "Chef AnneLnAI",
+  "description": "Chef AnneLnAI - Votre assistant culinaire intelligent",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fafaf8",
+  "theme_color": "#141413",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
