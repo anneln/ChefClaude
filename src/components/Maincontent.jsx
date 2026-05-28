@@ -5,6 +5,7 @@ import ClaudeRecipe from "./ClaudeRecipe";
 
 export default function Maincontent() {
   const [ingredients, setIngredients] = React.useState([]);
+  const sectionRef = React.useRef(null);
   const ingredientsListItems = ingredients.map((ingredient) => (
     <li key={ingredient}>{ingredient}</li>
   ));
@@ -16,6 +17,7 @@ export default function Maincontent() {
     setIsLoading(true);
     setRecipe(await getRecipeFromOpenAi(ingredients));
     setIsLoading(false);
+    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
   }
 
   function addIngredient(formData) {
@@ -49,7 +51,11 @@ export default function Maincontent() {
         />
       )}
       {(recipe || isLoading) && (
-        <ClaudeRecipe recipe={recipe} isLoading={isLoading} />
+        <ClaudeRecipe
+          recipe={recipe}
+          isLoading={isLoading}
+          sectionRef={sectionRef}
+        />
       )}
     </main>
   );
