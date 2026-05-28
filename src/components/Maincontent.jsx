@@ -13,11 +13,14 @@ export default function Maincontent() {
   const [recipe, setRecipe] = React.useState("");
   const [isLoading, setIsLoading] = React.useState(false);
 
+  React.useEffect(() => {
+    recipe ? sectionRef.current?.scrollIntoView({ behavior: "smooth" }) : null;
+  }, [recipe]);
+
   async function getRecipe() {
     setIsLoading(true);
     setRecipe(await getRecipeFromOpenAi(ingredients));
     setIsLoading(false);
-    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
   }
 
   function addIngredient(formData) {
@@ -45,17 +48,14 @@ export default function Maincontent() {
       </form>
       {ingredients.length > 0 && (
         <IngredientsList
+          sectionRef={sectionRef}
           ingredients={ingredients}
           ingredientsListItems={ingredientsListItems}
           getRecipe={getRecipe}
         />
       )}
       {(recipe || isLoading) && (
-        <ClaudeRecipe
-          recipe={recipe}
-          isLoading={isLoading}
-          sectionRef={sectionRef}
-        />
+        <ClaudeRecipe recipe={recipe} isLoading={isLoading} />
       )}
     </main>
   );
