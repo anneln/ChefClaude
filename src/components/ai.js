@@ -26,8 +26,13 @@ export async function getRecipeFromOpenAi(ingredientsArr) {
       },
     );
     const data = await response.json();
+    if (!response.ok) {
+      console.error("API error:", data);
+      return "Sorry, The chef is having a siesta. Please come back later.";
+    }
     return data.choices[0].message.content;
   } catch (err) {
     console.error(err.message);
+    return "The chef is having a siesta. Please come back later.";
   }
 }
