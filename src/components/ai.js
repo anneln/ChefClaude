@@ -14,7 +14,7 @@ export async function getRecipeFromOpenAi(ingredientsArr) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "openai/gpt-oss-120b:free",
+          model: "openrouter/free",
           messages: [
             { role: "system", content: SYSTEM_PROMPT },
             {
