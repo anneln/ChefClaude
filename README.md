@@ -47,3 +47,5 @@ The key is stored server-side and never exposed to the frontend.
 - [x] Added an animation before the recipe is displayed to keep users waiting.
 - [x] use vite.js
 - [x] Secure API key management using **Netlify Functions Proxy**
+
+Try [ChefanneLnAI](https://chefannelnai.netlify.app/)
