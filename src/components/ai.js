@@ -4,7 +4,7 @@ You are an assistant that receives a list of ingredients that a user has and sug
 
 export async function getRecipeFromOpenAi(ingredientsArr) {
   try {
-    const response = await fetch("/.netlify/functions/get-recipe", {
+    const response = await fetch("/api/get-recipe", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ingredients: ingredientsArr }),
