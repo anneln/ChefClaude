@@ -48,4 +48,4 @@ The key is stored server-side and never exposed to the frontend.
 - [x] use vite.js
 - [x] Secure API key management using **Netlify Functions Proxy**
 
-Try [ChefanneLnAI](https://chefannelnai.netlify.app/)
+Try [ChefanneLnAI](https://chefannelnai.netlify.app/) 👨‍🍳
